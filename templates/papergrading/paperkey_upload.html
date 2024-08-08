@@ -1,0 +1,26 @@
+{% extends 'papergrading/paperbase1.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<style>
+    .key{
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding-top: 100px;
+    }
+</style>
+<div class="container ">
+    <div class="key text-center">
+    <h1>Answer Key </h1>
+<form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ answer_key.as_p }}
+        <button type="submit">Upload Answer Key</button>
+    </form>
+   
+</div>
+</div>
+
+{% endblock content %}
+

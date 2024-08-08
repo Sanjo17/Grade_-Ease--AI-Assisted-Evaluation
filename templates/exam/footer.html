@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      .footer {
+        padding: 0px 0px 0px 0px;
+        margin: 0px;
+        
+
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      .s-footer{
+        position: fixed;
+      }
+      p {
+        text-align: center;
+      }
+      
+    </style>
+  </head>
+
+  <footer class="{%if pos%}s-footer{%else%}footer{%endif%} text-light" style="background-color: #1995ad">
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="wow fadeInUp footer-copyright">
+            <p>Copyright &copy; Grade-ease - {% now 'Y' %}</p>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

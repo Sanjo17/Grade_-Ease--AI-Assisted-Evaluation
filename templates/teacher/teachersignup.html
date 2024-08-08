@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+        form{
+           margin: 10px; 
+          
+        }
+        .container{
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+        .card{
+          width: 100vh;
+        }
+        .c-btn{
+          padding-top: 20px;
+          
+        }
+        
+
+    </style>
+  </head>
+  <body>
+    {% include "exam/navbar1.html" %}
+ 
+
+
+<br><br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-center mb-4">Teacher Register </h3>
+          <form method="POST" autocomplete="off" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group">
+              <label for="first_name">First Name</label>
+              <input type="text" name="first_name" class="form-control rounded-0" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last Name</label>
+              <input type="text" name="last_name" class="form-control rounded-0" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Contact</label>
+              <input type="tel" name="mobile" class="form-control rounded-0" placeholder="Contact Number" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" name="address" class="form-control rounded-0" placeholder="Address" required>
+            </div>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" name="username" class="form-control rounded-0" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword4">Password</label>
+              <input type="password" name="password" class="form-control rounded-0" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+              <label for="profile_pic">Profile Picture</label>
+              <input type="file" name="profile_pic" class="form-control rounded-0" placeholder="Profile Picture" required>
+            </div>
+            <div class="text-center c-btn" >
+               <button type="submit" class="btn btn-lg rounded-1 " style="background-color: #1995AD;color: aliceblue;">
+                  Signup
+                </button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<br><br>
+{% include "exam/footer.html" %}
+
+  </body>
+</html>

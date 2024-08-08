@@ -1,0 +1,38 @@
+{% extends 'exam/adminbase1.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<!-- {%block css%}
+<style>
+    .grid-container {
+      display: grid;
+  grid-template-columns: 17% auto; /* 25% for sidebar, rest for content */
+  gap: 20px; /* Gap between sidebar and content */
+  padding: 10px 20px 20px 20px;
+  height: 100vh;
+}
+</style>
+{% endblock %} -->
+</head>
+<h2 style="text-align:center;">Add Question</h2>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+    <div class="form-group">
+        <label for="question">Course</label>
+      {% render_field questionForm.courseID|attr:'required:true' class="form-control form-control-sm rounded-0"  %}
+        <br>
+
+      <label for="question">Question</label>
+      {% render_field questionForm.question|attr:'required:true' class="form-control form-control-sm rounded-0" placeholder="Example: Which one of the following is not a phase of Prototyping Model?" %}
+        <br>
+      <label for="question_number">Marks</label>
+      {% render_field questionForm.marks|attr:'required:true' class="form-control form-control-sm rounded-0" placeholder="Example: 5" %}
+        <br>
+      <label for="answer">Correct Answer</label>
+      {% render_field questionForm.correct_answer|attr:'required:true' class="form-control form-control-sm rounded-0" %}
+    </div>
+    
+
+    <button type="submit" class="btn btn-success" style="border-radius:0px;">Submit Question</button>
+  </form>
+<br><br><br>
+{% endblock content %}

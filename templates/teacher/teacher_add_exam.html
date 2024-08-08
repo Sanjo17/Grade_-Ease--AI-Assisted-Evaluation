@@ -1,0 +1,51 @@
+{% extends 'teacher/teacherbase1.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{%block css%}
+<style>
+    .grid-container {
+      display: grid;
+  grid-template-columns: 17% auto; /* 25% for sidebar, rest for content */
+  gap: 20px; /* Gap between sidebar and content */
+  padding: 10px 20px 20px 20px;
+  height: 100vh;
+}
+</style>
+{% endblock %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+       /* <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> */
+  a:link {
+        text-decoration: none;
+      }
+    
+  </style>
+</head>
+<h2 style="text-align:center; ">Add Course Info</h2>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+    <div class="form-group">
+      <label for="course_name">Course Name</label>
+      {% render_field courseForm.course_name class="form-control form-control-sm rounded-0" placeholder="Example: Databases" %}
+
+      <label for="question_number">Total Question</label>
+      {% render_field courseForm.question_number class="form-control form-control-sm rounded-0" placeholder="Example: 10" %}
+
+      <label for="total_marks">Total Marks</label>
+      {% render_field courseForm.total_marks class="form-control form-control-sm rounded-0" placeholder="Example: 100" %}
+      <label for="duration">Duration in minnutes</label>
+      {% render_field courseForm.duration class="form-control form-control-sm rounded-0" placeholder="Example: 100" %}
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary btn-lg rounded-0" style="border-radius: 0%;">Submit Info</button>
+  </form>
+<br><br><br>
+{% endblock content %}

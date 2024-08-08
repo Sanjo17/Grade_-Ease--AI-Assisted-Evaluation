@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style media="screen">
+  .hello{
+    font-family: "Caveat", "cursive";
+      color: #1d95ad;
+      font-size: 70px;
+      text-align: center;
+      padding-top: 120px;
+  } 
+  .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+  .c-btn{
+    background-color: #D9D9D9; /* Custom background color */
+    color: #1995AD; /* Text color */
+    border: none; /* Remove border */
+    padding: 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border-radius: 20px; /* Border radius */
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    width:200px;
+    font-size: 20px;
+    font-weight: 500;
+
+    
+  }
+  .c-btn:hover {
+    background-color: #1995AD;
+    color: #D9D9D9; /* Darker background color on hover */
+  }
+  
+
+  </style>
+
+</head>
+
+<body>
+
+  {% include "exam/navbar1.html" %}
+  
+      <!-- <a class="btn btn-secondary rounded-1" href="teachersignup" role="button">Create Your Account</a>
+      <a class="btn btn-primary rounded-0" href="teacherlogin" role="button">Login Now</a> -->
+    <div class="box">
+      <div class="hello">
+      Hello Teacher
+    </div>
+    <a href="teacherlogin"> <button type="button" class="c-btn">Login</button></a><br>
+    <a href="teachersignup"><button type="button" class="c-btn">Create Account</button></a>
+  </div>
+  {% include "exam/footer.html" %}
+  {% block css %}
+  <style>
+    footer{
+      position: fixed;
+    }
+  </style>
+  {% endblock %}
+</body>
+
+</html>

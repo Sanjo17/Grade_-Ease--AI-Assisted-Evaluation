@@ -1,0 +1,8 @@
+Q1: What is a computer?
+
+A1:  A computer is an electronic device that can store, retrieve, and process data according to instructions stored in its memory. [Mark = 10]
+
+Q2 : what is a mouse?
+
+A2: A mouse is a hand-held pointing device used to interact with a computer's graphical user interface (GUI). It typically consists of a small, palm-sized device with one or more buttons and a tracking mechanism, usually a ball or an optical sensor, that detects motion as the user moves the mouse across a flat surface. [Mark = 10]
+

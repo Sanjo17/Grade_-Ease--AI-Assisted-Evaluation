@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <style>
+    body {
+      background-color: #a1d6e2;
+    }
+    .welcome {
+      font-family: "Caveat", "cursive";
+      color: #1d95ad;
+      font-size: 100px;
+      margin-top: 0px;
+      margin-bottom: -60px;
+    }
+    .title {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      color: #f1f1f2;
+      font-size: 150px;
+      margin-top: 0px;
+      margin-bottom: 2px;
+      letter-spacing: -10px;
+    }
+    .container1 {
+      height: 100vh;
+      justify-content: center;
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .contact {
+      justify-content: center;
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      
+    }
+    .container2 {
+      height: 100vh;
+    }
+    .col {
+      background-color: #1995ad;
+      height: 70vh;
+      border-radius: 20px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease
+    }
+    .row {
+      gap: 30px;
+    }
+    .des {
+      font-family: "Roboto Mono", monospace;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: #1995ad;
+    }
+    .about {
+      font-family: "Caveat", "cursive";
+      color: #1d95ad;
+      font-size: 70px;
+      margin-top: 30px;
+
+      color: #f1f1f2;
+      font-weight: 500;
+    }
+    .container3 {
+      border: 10px solid #f1f1f2;
+      border-radius: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px 40px 20px 40px;
+
+    }
+
+    .form {
+      padding: 50px;
+        
+    }
+    .submit-btn {
+      background-color: #007bff; /* Change button background color */
+      color: #fff;
+    }
+    .col-head {
+      padding: 10px;
+      font-family: "Inter", sans-serif;
+      font-size: 30px;
+      color: #f1f1f2;
+      font-weight: 400;
+    }
+    .col-des {       
+      font-size: 15px;
+      color: #f1f1f2;
+    }
+    .col:hover {
+    box-shadow: 0px 0px 50px #05dbea;
+  }
+  </style>
+  <body>
+    {% include "exam/navbar1.html" %}
+    <div class="container">
+      <div class="container1">
+        <div class="welcome">Welcome to,</div>
+        <div class="title">Grade Ease</div>
+        <p class="des">
+          Grade-ease, a dynamic web application developed with Django, redefines
+          the evaluation process for online tests by seamlessly integrating
+          advanced pre-trained models like BERT for semantic similarity
+          assessment. It offers educators a comprehensive platform where they
+          can create, administer, and, if necessary, manually edit marks for
+          assessments.
+        </p>
+      </div>
+    </div>
+    <section id="about" class="py-5">
+    <div class="container px-4 text-center">
+      <div class="container2">
+        <h1 class="about">About</h1>
+
+        <div class="row gx-5">
+          <div class="col">
+            <div class="col-head">Automatic Grading</div>
+            <div class="col-des">GradeEase offers a revolutionary solution for automatic grading, capable of evaluating both 
+              online subjective answers and responses provided in digital answer sheets. Whether students submit their answers 
+              digitally through an online platform or by uploading a scanned copy of their paper sheet, GradeEase employs cutting-edge 
+              technology to analyze and assess their responses with precision. Utilizing advanced algorithms , GradeEase compares student 
+              answers to model responses or predefined criteria set by the instructor. By seamlessly integrating with various digital platforms 
+              and accommodating diverse assessment formats, GradeEase revolutionizes the grading experience for educators and students 
+              alike, facilitating efficient and effective evaluation in today's digital learning environment.</div>
+          </div>
+          <div class="col">
+            <div class="col-head">Online Test</div>
+            <div class="col-des">Grade Ease facilitates the seamless administration and evaluation of online 
+              tests across various courses. Educators can effortlessly set examinations for their students, featuring 
+              subjective questions that require written responses. When students undertake these exams, Grade Ease employs 
+              sophisticated algorithms to compare their answers with the model answers provided by the teacher. Through this 
+              evaluation process, the website accurately grades each paper, considering factors such as accuracy, 
+              relevance, and coherence. Subsequently, it promptly delivers the results to the students.</div>
+          </div>
+          <div class="col">
+            <div class="col-head">Answer Paper Grading</div>
+            <div class="col-des">Grade Ease  offers a streamlined solution for automatic grading of answer sheets across various
+              courses. With this platform, students can conveniently upload their answer sheets, tailored to their respective courses. 
+              Utilizing advanced algorithms , Grade Ease swiftly analyzes the content of the answer sheets, evaluating responses against 
+              predefined criteria or model answers. Upon completion of the 
+             analysis, the website promptly generates accurate grades and provides detailed feedback to the students.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section id="contact" class="py-5">
+    <div class="container" style="padding-bottom: 20px">
+      <div class="contact">
+        <h1 class="about">Contact Us</h1>
+      </div>
+      <div class="container3">
+        <form class="form" method="post"> 
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Your Name</label>
+            {{ form.name }}
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputName"
+              aria-describedby="nameHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail" class="form-label">Your Email</label>
+            {{ form.email }}
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputMessage" class="form-label"
+              >Your Message</label
+            >
+            {{ form.message }}
+            <textarea
+              class="form-control"
+              id="exampleInputMessage"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="sumbit-btn text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </section>
+
+    {% include "exam/footer.html" %}
+  </body>
+</html>

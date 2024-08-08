@@ -1,0 +1,49 @@
+{% extends 'papergrading/pdfbase.html' %}
+
+{% load static %}
+<head>
+    <style>
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+    </style>
+</head>
+{% block content %}
+
+
+<div class="container-fluid ">
+        <div class="row gx-3">
+            <div class="col-9 bg-dark" >
+
+            <!-- <iframe id="pdf" src="{{filename}}" frameborder="0"></iframe> -->
+   
+            <h2>Student Paper</h2>
+            {% if student_paper.answer_file %}
+        
+            <img  src="{{ student_paper.answer_file.url }}" alt="Uploaded Image" width="50%">
+        
+            {% else %}
+            <p>No file uploaded.</p>
+            {% endif %}
+            </div>
+            <div class="col-3 ">
+
+            <h4>Total Marks of {{student_name}} = </h4>
+            <h1>{{result}}</h1>
+    
+            <table>
+            <tr>
+            <th>Q1</th>
+            <th>Q2</th></tr>
+            <tr><td>4</td>
+            <td>44</td></tr></div>
+
+            </table>
+            </div>
+    </div>
+</div>
+
+
+{% endblock content %}
