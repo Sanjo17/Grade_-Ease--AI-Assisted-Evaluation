@@ -60,6 +60,18 @@ GradeEase is a web-based application developed as a final year project designed 
 6. **Create a .env file :**
    create a .env file and add the api key.
 
+## Images
+
+Here are some screenshots of the GradeEase application:
+
+1. **Homepage:**
+   ![Homepage](path/to/homepage-image.png)
+
+2. **Evaluation Results:**
+   ![Evaluation Results](path/to/results-image.png)
+
+3. **Text Extraction Interface:**
+   ![Text Extraction](path/to/text-extraction-image.png)
 
 
 
