@@ -62,9 +62,4 @@ GradeEase is a web-based application developed as a final year project designed 
 
 
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
 
