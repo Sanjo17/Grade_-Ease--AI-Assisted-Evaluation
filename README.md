@@ -34,7 +34,7 @@ GradeEase is a web-based application developed as a final year project designed 
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/Sanjo17/Grade_Ease_AI-Assisted-Evaluation.git)
    ```
 
 2. **Install Dependencies:**
@@ -65,13 +65,13 @@ GradeEase is a web-based application developed as a final year project designed 
 Here are some screenshots of the GradeEase application:
 
 1. **Homepage:**
-   ![Homepage](path/to/homepage-image.png)
+   ![Homepage](media/reportcardtemp/home.png)
 
 2. **Evaluation Results:**
-   ![Evaluation Results](path/to/results-image.png)
+   ![Evaluation Results](media/reportcardtemp/paperresult.png)
 
 3. **Text Extraction Interface:**
-   ![Text Extraction](path/to/text-extraction-image.png)
+   ![Text Extraction](media/reportcardtemp/answer.png)
 
 
 
