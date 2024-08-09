@@ -55,19 +55,16 @@ GradeEase is a web-based application developed as a final year project designed 
 
 5. **Access the Application:**
    Open `http://127.0.0.1:8000/` in your web browser.
+   
 
-## Contributing
+6. **Create a .env file :**
+   create a .env file and add the api key.
 
-Feel free to open issues or submit pull requests if you have suggestions or improvements. 
+
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
 
-For any questions or feedback, please contact [your-email@example.com](mailto:your-email@example.com).
 
----
-
-Replace `<repository-url>` with the actual URL of your repository and `[your-email@example.com]` with your email address. This README provides an overview, features, technical details, and setup instructions for your project.
